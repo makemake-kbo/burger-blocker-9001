@@ -36,5 +36,8 @@ if(thread_container)
 		post.parentNode.removeChild(post);
 	}
 	
-	console.log(`Blocked ${posts_blocked} posts.`);
+	if(posts_blocked > 0)
+	{
+		console.log(`EB9K: Blocked ${posts_blocked} posts.`);
+	}
 }
