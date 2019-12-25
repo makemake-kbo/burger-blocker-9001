@@ -1,0 +1,15 @@
+{
+	"name": "Euro Blocker 9000",
+	"version": "0.1.0",
+	"description": "English only USA",
+
+	"content_scripts": 
+	[
+		{
+			"js": ["content.js"],
+			"matches": ["https://www.teamfortress.tv/*"]
+		}
+	],
+
+	"manifest_version": 2
+}
