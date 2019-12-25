@@ -11,33 +11,42 @@ const blocked_flags =
 	"flag-cz"
 ]
 
+chrome.storage.sync.get(["enabled"], function(val) {
+	remove_posts(val["enabled"]);
+});
 
-var thread_container = document.getElementById("thread-container");
-var index_to_remove = [];
-if(thread_container)
+function remove_posts(enabled)
 {
-	var post_array = thread_container.getElementsByClassName("post");
-	var remove_posts = [];
-	var posts_blocked = 0;
-
-	for (let post of post_array)
+	if(enabled == 1)
 	{
-		let flag = post.querySelector(".post-header .flag").className.split(" ")[flag_index];
-		if(blocked_flags.includes(flag))
+		var thread_container = document.getElementById("thread-container");
+		var index_to_remove = [];
+		if(thread_container)
 		{
-			remove_posts.push(post);
-			posts_blocked++;
+			var post_array = thread_container.getElementsByClassName("post");
+			var remove_posts = [];
+			var posts_blocked = 0;
+
+			for (let post of post_array)
+			{
+				let flag = post.querySelector(".post-header .flag").className.split(" ")[flag_index];
+				if(blocked_flags.includes(flag))
+				{
+					remove_posts.push(post);
+					posts_blocked++;
+				}
+			}
+			
+			while(remove_posts.length > 0)
+			{
+				let post = remove_posts.shift();
+				post.parentNode.removeChild(post);
+			}
+			
+			if(posts_blocked > 0)
+			{
+				console.log(`EB9K: Blocked ${posts_blocked} posts.`);
+			}
 		}
-	}
-	
-	while(remove_posts.length > 0)
-	{
-		let post = remove_posts.shift();
-		post.parentNode.removeChild(post);
-	}
-	
-	if(posts_blocked > 0)
-	{
-		console.log(`EB9K: Blocked ${posts_blocked} posts.`);
 	}
 }

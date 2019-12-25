@@ -2,6 +2,7 @@
 	"name": "Euro Blocker 9000",
 	"version": "0.1.0",
 	"description": "English only USA",
+	"permissions":["storage"],
 	"browser_action":
 	{
 		"default_popup": "popup.html"
