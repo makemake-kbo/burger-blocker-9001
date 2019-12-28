@@ -8,7 +8,7 @@ const blocked_flags =
 	"flag-gb", "flag-at", "flag-pl", "flag-dk",
 	"flag-un", "flag-se", "flag-be", "flag-fr",
 	"flag-en", "flag-fi", "flag-eu", "flag-nl",
-	"flag-cz"
+	"flag-cz", "flag-de"
 ]
 
 chrome.storage.sync.get(["enabled"], function(val) {
