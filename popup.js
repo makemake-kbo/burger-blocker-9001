@@ -1,3 +1,4 @@
+//Auto-executes this function on load.
 (function() {
 	chrome.storage.sync.get(["enabled"], function(val) {
 		var menu = document.getElementById("enb_drop");
@@ -11,11 +12,6 @@
 		}
 	});
 })();
-
-function set_dropdown_default(val)
-{
-	
-}
 
 document.getElementById("save_button").addEventListener("click", function() {
 	var val = document.getElementById("enb_drop").value;

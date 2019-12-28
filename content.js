@@ -20,7 +20,6 @@ function remove_posts(enabled)
 	if(enabled == 1)
 	{
 		var thread_container = document.getElementById("thread-container");
-		var index_to_remove = [];
 		if(thread_container)
 		{
 			var post_array = thread_container.getElementsByClassName("post");
