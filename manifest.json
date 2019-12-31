@@ -1,7 +1,8 @@
 {
-	"name": "Euro Blocker 9000",
+	"name": "TF.TV Enhancer",
+	"short_name": "EB9K",
 	"version": "0.1.0",
-	"description": "English only USA",
+	"description": "Greatly enhance user experience on TF.TV",
 	"permissions":["storage"],
 	"browser_action":
 	{
