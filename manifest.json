@@ -1,8 +1,8 @@
 {
-	"name": "TF.TV Enhancer",
+	"name": "TF.TV Enhancer BURGER :DDDD edition",
 	"short_name": "BB9K",
-	"version": "0.1.0",
-	"description": "Greatly enhance user experience on TF.TV",
+	"version": "1.0.0",
+	"description": "Greatly enhance user experience on TF.TV by removing burger posts.",
 	"permissions":["storage"],
 	"browser_action":
 	{
