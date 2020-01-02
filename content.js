@@ -2,13 +2,12 @@
 //this is the index of the country flag.
 const flag_index = 1;
 
-//All flags that get blocked. Also included UN
+/*
+*	Blocks amrican flag
+*/
 const blocked_flags = 
 [
-	"flag-gb", "flag-at", "flag-pl", "flag-dk",
-	"flag-un", "flag-se", "flag-be", "flag-fr",
-	"flag-en", "flag-fi", "flag-eu", "flag-nl",
-	"flag-cz", "flag-de"
+	"flag-us"
 ]
 
 chrome.storage.sync.get(["enabled"], function(val) {
@@ -44,7 +43,7 @@ function remove_posts(enabled)
 			
 			if(posts_blocked > 0)
 			{
-				console.log(`EB9K: Blocked ${posts_blocked} posts.`);
+				console.log(`BB9K: Blocked ${posts_blocked} posts.`);
 			}
 		}
 	}

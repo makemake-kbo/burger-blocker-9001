@@ -1,6 +1,6 @@
 {
 	"name": "TF.TV Enhancer",
-	"short_name": "EB9K",
+	"short_name": "BB9K",
 	"version": "0.1.0",
 	"description": "Greatly enhance user experience on TF.TV",
 	"permissions":["storage"],
